@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9d51a918df28346a62c279dd251e53, type: 3}
+  m_Name: Difficult
+  m_EditorClassIdentifier: 
+  background: {r: 0.9245283, g: 0.64853984, b: 0.16135636, a: 1}
+  text: {r: 0.2708009, g: 0.2735849, b: 0.19228373, a: 1}
+  cooldown: {r: 0.6181368, g: 0.8679245, b: 0.48718405, a: 0.50980395}
+  cooldownTime: 0.6
+  sound: {fileID: 8300000, guid: 4757bb21c1e85674abf9568e460a7c33, type: 3}

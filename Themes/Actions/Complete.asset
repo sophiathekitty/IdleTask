@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9d51a918df28346a62c279dd251e53, type: 3}
+  m_Name: Complete
+  m_EditorClassIdentifier: 
+  background: {r: 0.084104665, g: 0.8490566, b: 0.21885046, a: 1}
+  text: {r: 0.11881453, g: 0.14385329, b: 0.2830189, a: 1}
+  cooldown: {r: 0.8213931, g: 0.9056604, b: 0.09825563, a: 0.9372549}
+  cooldownTime: 0.8
+  sound: {fileID: 8300000, guid: cbd02ba2761ff1c4181a0d9c806c24bc, type: 3}

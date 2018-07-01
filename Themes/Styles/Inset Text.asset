@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2108210716, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: Inset Text
+  m_EditorClassIdentifier: 
+  topLeft: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 0.759}
+  topRight: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 0.741}
+  bottomLeft: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 0.753}
+  bottomRight: {r: 1, g: 1, b: 1, a: 0.697}
