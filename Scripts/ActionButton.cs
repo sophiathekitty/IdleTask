@@ -10,12 +10,14 @@ using TMPro;
 public class ActionButton : MonoBehaviour {
     public ActionLevel level;
     public TextMeshProUGUI text;
+    public TextMeshProUGUI count_txt;
     public Image bar;
     public Image icon;
     private Button button;
     private AudioSource audioSource;
     private float cooldown = 0f;
     private Image background;
+    public int click_count = 0;
     // Use this for initialization
     void Start() {
         button = GetComponent<Button>();
@@ -46,11 +48,13 @@ public class ActionButton : MonoBehaviour {
             bar.rectTransform.localScale = new Vector3(cooldown/level.cooldownTime, cooldown / level.cooldownTime, 1);
         else
             bar.rectTransform.localScale = new Vector3(0, 0, 1);
+        count_txt.text = click_count.ToString();
     }
 
     public void OnButtonClick()
     {
         audioSource.PlayOneShot(level.sound);
         cooldown = level.cooldownTime;
+        click_count++;
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class ActionLevel : ScriptableObject {
     public Color background;
     public Color text;
+    public Color count;
     public Color cooldown;
     public float cooldownTime;
     public AudioClip sound;
