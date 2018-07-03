@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {r: 0.55420697, g: 0.9622642, b: 0.34950158, a: 1}
   text: {r: 0.57005996, g: 0.19824673, b: 0.9339623, a: 1}
+  count: {r: 0.93333334, g: 0.19999996, b: 0.90882355, a: 1}
   cooldown: {r: 0.2637183, g: 0.23589355, b: 0.8773585, a: 0.6627451}
   cooldownTime: 0.3
   sound: {fileID: 8300000, guid: 715f704e0327d644bb90820f61deb3a2, type: 3}

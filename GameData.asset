@@ -13,4 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveFileName: save.dat
   saveFilePath: 
-  data: []
+  data:
+  - {fileID: 11400000, guid: 07b86e5acaabf1d4ab74e7b2d31466eb, type: 2}
+  - {fileID: 11400000, guid: 7959ce96a4ac03c48bfe6a9072916260, type: 2}
+  - {fileID: 11400000, guid: e4ec67f5cf916674b946fa877b7e1c0c, type: 2}
+  - {fileID: 11400000, guid: 98b275436e2bab84d92679789786ac55, type: 2}
+  - {fileID: 11400000, guid: 203bbe5869aeae34db5726c9732bc506, type: 2}
+  - {fileID: 11400000, guid: 1a7a260885b80f941849e41796af8b76, type: 2}
+  - {fileID: 11400000, guid: a9a05fd17c9de204b8d381477b4535e7, type: 2}
+  - {fileID: 11400000, guid: 954090e8354271a46bc48294eda7a68c, type: 2}
+  - {fileID: 11400000, guid: c825a8c4b5fb4114db043d8decf6b4a4, type: 2}

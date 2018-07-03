@@ -25,6 +25,7 @@ public class ActionButton : MonoBehaviour {
         ApplyLevel();
         Debug.Log(level.sound.length);
     }
+
     void ApplyLevel() { 
         bar.color = level.cooldown;
         background = button.GetComponent<Image>();
