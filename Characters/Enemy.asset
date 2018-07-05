@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3366069f52efdd041965325198f0b15e, type: 3}
+  m_Name: Enemy
+  m_EditorClassIdentifier: 
+  full_name: {fileID: 11400000, guid: b5c64f0d1bd1c8446984fb4fe46731fc, type: 2}
+  short_name: {fileID: 11400000, guid: 06de00fd4c9d9af4ebb1815c591f5146, type: 2}
+  level: {fileID: 11400000, guid: 766e9a33a40735640bffcd44c9348c84, type: 2}
+  health: {fileID: 11400000, guid: 4767bedf5d2fa014d91cdb91695a00c4, type: 2}
+  energy: {fileID: 11400000, guid: 8bc160eec3e36b14bb11c46a08a11cae, type: 2}
+  experience: {fileID: 11400000, guid: f05da3defb5a9f24c9616ce9896c766f, type: 2}
+  strength: {fileID: 11400000, guid: 4320e087f9df7244c9bb4cc48479dc86, type: 2}
+  will: {fileID: 11400000, guid: bfab469d22922d84b8eb84885177b087, type: 2}
+  stamina: {fileID: 11400000, guid: 547c18dc2179e65408cb5986041977c4, type: 2}
+  perception: {fileID: 11400000, guid: a02027929d2bd3e439565183096b0cc4, type: 2}

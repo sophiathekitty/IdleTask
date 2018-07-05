@@ -8,9 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dfd5b24237b50c4a9212e5c6dde1e52, type: 3}
-  m_Name: PlayerMana
+  m_Script: {fileID: 11500000, guid: 5f6e745ff2d38ca4bac44100c1ca985c, type: 3}
+  m_Name: PlayerNameShort
   m_EditorClassIdentifier: 
-  InitialValue: 3
-  InitialMax: 50
-  InitialUnavailable: 0
+  InitialValue: 

@@ -23,7 +23,6 @@ public class ActionButton : MonoBehaviour {
         button = GetComponent<Button>();
         audioSource = GetComponent<AudioSource>();
         ApplyLevel();
-        Debug.Log(level.sound.length);
     }
 
     void ApplyLevel() { 
