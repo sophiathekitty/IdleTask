@@ -6,12 +6,13 @@ public class StoryLine : ScriptableObject {
     public string sentence; // $player searched the area and found, $reward
     public MadLib[] madlibs;
     public AudioClip clip;
+    public float cost = 1;
     public virtual string MakeSentence()
     {
         string s = sentence;
         foreach (MadLib r in madlibs)
             s = s.Replace(r.search, r.Replace);
-        return sentence;
+        return s;
     }
 
     [System.Serializable]

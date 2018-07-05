@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a65965eda3b1504ca68a5a9d9e8a2de, type: 3}
+  m_Name: Some Nonsense
+  m_EditorClassIdentifier: 
+  sentence: Looks like $amount $noun just went $direction.
+  madlibs:
+  - search: $amount
+    replaces:
+    - some
+    - a good amount of
+    - lots of
+    - more than enough
+  - search: $noun
+    replaces:
+    - shit
+    - crap
+    - excitement
+    - events
+    - drama
+  - search: $direction
+    replaces:
+    - down
+    - south
+    - up
+    - to shit
+    - in a mostly downword direction
+    - away
+    - up in smoke
+    - away forever
+    - somewhere
+    - down over there
+  clip: {fileID: 0}
+  cost: 1
