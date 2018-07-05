@@ -7,6 +7,7 @@ public class Character : ScriptableObject
 {
     public StringVariable full_name;        // ie: sophi of the pink stars
     public StringVariable short_name;       // ie: sophi
+    public Color color;
     public IntVariable level;               // the current level of the character... ratio of player/enemy 
     public AttributeVariable health;        // how much life they have
     public AttributeVariable energy;        // how much special they can use

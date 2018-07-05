@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   full_name: {fileID: 11400000, guid: 9fad41c370f52a44e933cbad0a4212e0, type: 2}
   short_name: {fileID: 11400000, guid: 6e93ee546443d8648889b7ce2213fee0, type: 2}
+  color: {r: 0.7683308, g: 0.8666667, b: 0.6627451, a: 1}
   level: {fileID: 11400000, guid: 98b275436e2bab84d92679789786ac55, type: 2}
   health: {fileID: 11400000, guid: 7959ce96a4ac03c48bfe6a9072916260, type: 2}
   energy: {fileID: 11400000, guid: e4ec67f5cf916674b946fa877b7e1c0c, type: 2}
