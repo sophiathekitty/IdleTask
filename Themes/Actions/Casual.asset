@@ -17,3 +17,4 @@ MonoBehaviour:
   cooldown: {r: 0.534981, g: 0.11494303, b: 0.5943396, a: 0.48235294}
   cooldownTime: 0.3
   sound: {fileID: 8300000, guid: a11020f0b0fb3f040b0d71156da88d9a, type: 3}
+  actionPoints: {fileID: 11400000, guid: a9a05fd17c9de204b8d381477b4535e7, type: 2}

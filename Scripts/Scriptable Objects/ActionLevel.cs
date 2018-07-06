@@ -10,14 +10,11 @@ public class ActionLevel : ScriptableObject {
     public Color cooldown;
     public float cooldownTime;
     public AudioClip sound;
+    public FloatVariable actionPoints;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void GrantActionPoints(int streak)
+    {
+        if (actionPoints != null)
+            actionPoints.RuntimeValue += cooldownTime * streak;
+    }
 }

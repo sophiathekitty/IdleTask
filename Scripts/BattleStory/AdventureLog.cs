@@ -8,8 +8,8 @@ public class AdventureLog : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        for (int i = 0; i < 100; i++)
-            AddEntry(storyLines[Random.Range(0, storyLines.Length - 1)]);
+        //for (int i = 0; i < 100; i++)
+        //    AddEntry(storyLines[Random.Range(0, storyLines.Length - 1)]);
     }
 
     public void AddEntry(StoryLine sentence)

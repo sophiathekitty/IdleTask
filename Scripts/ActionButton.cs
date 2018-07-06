@@ -18,6 +18,8 @@ public class ActionButton : MonoBehaviour {
     private float cooldown = 0f;
     private Image background;
     public int click_count = 0;
+    public ActionEvent clickEvent;
+
     // Use this for initialization
     void Start() {
         button = GetComponent<Button>();
@@ -55,6 +57,9 @@ public class ActionButton : MonoBehaviour {
     {
         audioSource.PlayOneShot(level.sound);
         cooldown = level.cooldownTime;
-        click_count++;
+        level.GrantActionPoints(click_count++);
+
+        if (clickEvent != null)
+            clickEvent.Raise(level);
     }
 }
