@@ -7,12 +7,25 @@ public class StoryLine : ScriptableObject {
     public MadLib[] madlibs;
     public AudioClip clip;
     public float cost = 1;
+    public FloatVariable actionPoints;
     public virtual string MakeSentence()
     {
         string s = sentence;
         foreach (MadLib r in madlibs)
             s = s.Replace(r.search, r.Replace);
+        if(actionPoints != null)
+            actionPoints.RuntimeValue -= cost;
         return s;
+    }
+    public virtual bool CanDo
+    {
+        get
+        {
+            if (actionPoints == null)
+                return true;
+
+            return actionPoints.RuntimeValue > cost;
+        }
     }
 
     [System.Serializable]
