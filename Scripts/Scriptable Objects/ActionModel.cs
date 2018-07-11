@@ -15,7 +15,7 @@ public class ActionModel {
     {
         string[] parts = data.Split(',');
         name = parts[0];
-        level = int.Parse(parts[1]);
+        daily = int.Parse(parts[1]);
         icon = int.Parse(parts[2]);
         level = int.Parse(parts[3]);
         clicks = int.Parse(parts[4]);

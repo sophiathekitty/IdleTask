@@ -11,4 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7371ba6b2b8a5b645bee4a9220c4cfdb, type: 3}
   m_Name: Action Level Manager
   m_EditorClassIdentifier: 
-  levels: []
+  levels:
+  - {fileID: 11400000, guid: c137e4bc528e4fe43b54cde887a6236c, type: 2}
+  - {fileID: 11400000, guid: 71a5f110faf427647b9d23d1bdd71504, type: 2}
+  - {fileID: 11400000, guid: eedba2887fe5b09488aae5e8e5b3e196, type: 2}
+  - {fileID: 11400000, guid: e8abab90c4c438748b22e848a219f295, type: 2}
+  - {fileID: 11400000, guid: 06d35e2cd31b4474bad5da9e0a6df9aa, type: 2}
+  - {fileID: 11400000, guid: 89c25552dd7e6f54699629488ba58adf, type: 2}
+  - {fileID: 11400000, guid: 1fbb6e47b3d756d42812a5beef30a291, type: 2}
+  - {fileID: 11400000, guid: 376fc99dcc5720940ae1d7fa82c0786f, type: 2}
+  - {fileID: 11400000, guid: e2767236cc21fb84ea28241b9707a4bd, type: 2}
+  - {fileID: 11400000, guid: eca3a0b5dac3a3d48ab189d96b2e7605, type: 2}
+  - {fileID: 11400000, guid: 83516a1d7f985d04aa765d7a1f37792b, type: 2}
+  - {fileID: 11400000, guid: f92837b44c7e2814f860b0b5d71de5ab, type: 2}

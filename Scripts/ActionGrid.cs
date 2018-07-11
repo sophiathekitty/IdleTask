@@ -6,7 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GridLayoutGroup))]
 public class ActionGrid : MonoBehaviour {
     public GameObject actionPrefab;
-    public ActionLevel[] level;
+    public ActionLevelManager levels;
+    public ActionIconManager icons;
     public Sprite[] sprites;
 
     // Use this for initialization
@@ -16,11 +17,21 @@ public class ActionGrid : MonoBehaviour {
         {
             GameObject actionButtonObject = GameObject.Instantiate(actionPrefab, transform);
             ActionButton actionButton = actionButtonObject.GetComponent<ActionButton>();
-            actionButton.level = level[Random.Range(0, level.Length - 1)];
+            actionButton.level = levels.levels[Random.Range(0, levels.levels.Length - 1)];
             actionButton.text.text = RandomWord();
-            actionButton.icon.sprite = sprites[Random.Range(0, sprites.Length)];
+            actionButton.icon.sprite = icons.icons[Random.Range(0, icons.icons.Count - 1)];
         }
 	}
+
+    public void AddAction(ActionModel action)
+    {
+        GameObject actionButtonObject = GameObject.Instantiate(actionPrefab, transform);
+        ActionButton actionButton = actionButtonObject.GetComponent<ActionButton>();
+        actionButton.level = levels.levels[action.level];
+        actionButton.text.text = action.name;
+        actionButton.icon.sprite = icons.icons[action.icon];
+
+    }
 
     string RandomWord()
     {
