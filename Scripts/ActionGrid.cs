@@ -8,11 +8,14 @@ public class ActionGrid : MonoBehaviour {
     public GameObject actionPrefab;
     public ActionLevelManager levels;
     public ActionIconManager icons;
-    public Sprite[] sprites;
-
+    public ActionDatabase database;
     // Use this for initialization
     void Start () {
+        // load the actions
+        foreach (ActionModel action in database.actions)
+            AddAction(action);
         // spawn a bunch of buttons
+        /*
         for (int i = 0; i < 100; i++)
         {
             GameObject actionButtonObject = GameObject.Instantiate(actionPrefab, transform);
@@ -21,16 +24,20 @@ public class ActionGrid : MonoBehaviour {
             actionButton.text.text = RandomWord();
             actionButton.icon.sprite = icons.icons[Random.Range(0, icons.icons.Count - 1)];
         }
+        */
 	}
 
     public void AddAction(ActionModel action)
     {
         GameObject actionButtonObject = GameObject.Instantiate(actionPrefab, transform);
         ActionButton actionButton = actionButtonObject.GetComponent<ActionButton>();
+        Debug.Log(action.level + " / " + levels.levels.Length);
         actionButton.level = levels.levels[action.level];
         actionButton.text.text = action.name;
         actionButton.icon.sprite = icons.icons[action.icon];
-
+        actionButton.model = action;
+        actionButton.database = database;
+        actionButton.click_count = action.clicks;
     }
 
     string RandomWord()

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class AddActionForm : MonoBehaviour {
+    public TMP_InputField nameTxt;
     public TMP_Dropdown dailiesList;
     public TMP_Dropdown levelsList;
-
+    public ActionIconManager icons;
     public ActionLevelManager actionLevelManager;
+
+    public ActionGrid currentGrid;
+    public ActionDatabase database;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +25,14 @@ public class AddActionForm : MonoBehaviour {
     public void SaveAction()
     {
 
+        ActionModel action = new ActionModel
+        {
+            name = nameTxt.text,
+            icon = icons.selected,
+            level = levelsList.value
+        };
+        currentGrid.AddAction(action);
+        database.actions.Add(action);
         gameObject.SetActive(false);
     }
 	// Update is called once per frame

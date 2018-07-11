@@ -8,6 +8,8 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 [AddComponentMenu("Actions/Buttion")]
 public class ActionButton : MonoBehaviour {
+    public ActionModel model;
+    public ActionDatabase database;
     public ActionLevel level;
     public TextMeshProUGUI text;
     public TextMeshProUGUI count_txt;
@@ -58,6 +60,10 @@ public class ActionButton : MonoBehaviour {
         audioSource.PlayOneShot(level.sound);
         cooldown = level.cooldownTime;
         level.GrantActionPoints(click_count++);
+
+        if (database != null)
+            database.actions[model.index].clicks = click_count;
+        Debug.Log(database.actions[model.index].clicks);
 
         if (clickEvent != null)
             clickEvent.Raise(level);

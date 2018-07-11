@@ -11,35 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0b9427049057044a8f1d5b56255e68, type: 3}
   m_Name: Action Database
   m_EditorClassIdentifier: 
-  actions:
-  - name: Drink Water
-    daily: 0
-    level: 1
-    icon: 1
-    clicks: 0
-  - name: 
-    daily: 0
-    level: 0
-    icon: 0
-    clicks: 0
-  - name: 
-    daily: 0
-    level: 0
-    icon: 0
-    clicks: 0
   defaults:
-  - name: Drink Water
+  - index: 0
+    name: Drink Water
     daily: 0
-    level: 1
-    icon: 1
-    clicks: 0
-  - name: 
-    daily: 0
-    level: 0
-    icon: 0
-    clicks: 0
-  - name: 
-    daily: 0
-    level: 0
-    icon: 0
+    level: 11
+    icon: 236
     clicks: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Variables/Action Database")]
 public class ActionDatabase : SavableVariable, ISerializationCallbackReceiver {
+    [System.NonSerialized]
     public List<ActionModel> actions = new List<ActionModel>();
 
     public List<ActionModel> defaults = new List<ActionModel>();
@@ -12,7 +13,11 @@ public class ActionDatabase : SavableVariable, ISerializationCallbackReceiver {
     {
         foreach (ActionModel action in defaults)
             if (!actions.Contains(action))
+            {
                 actions.Add(action);
+                action.clicks = 0;
+            }
+                
     }
 
     public void OnBeforeSerialize()
@@ -32,7 +37,9 @@ public class ActionDatabase : SavableVariable, ISerializationCallbackReceiver {
         foreach (string am in ams)
             if (am != "")
                 actions.Add(new ActionModel(am));
-                
+
+        for (int i = 0; i < actions.Count; i++)
+            actions[i].index = i;
     }
 
     public override string OnSaveData()
