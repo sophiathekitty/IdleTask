@@ -63,7 +63,7 @@ public class ActionButton : MonoBehaviour {
 
         if (database != null)
             database.actions[model.index].clicks = click_count;
-        Debug.Log(database.actions[model.index].clicks);
+
 
         if (clickEvent != null)
             clickEvent.Raise(level);

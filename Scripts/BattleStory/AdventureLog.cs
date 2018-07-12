@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AdventureLog : MonoBehaviour {
     public GameObject entryPrefab;
-    public StoryLine[] storyLines;
 
     // Use this for initialization
     void Start () {
         //for (int i = 0; i < 100; i++)
         //    AddEntry(storyLines[Random.Range(0, storyLines.Length - 1)]);
     }
+
 
     public void AddEntry(StoryLine sentence)
     {

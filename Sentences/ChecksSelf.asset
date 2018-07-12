@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a65965eda3b1504ca68a5a9d9e8a2de, type: 3}
+  m_Name: ChecksSelf
+  m_EditorClassIdentifier: 
+  sentence: $player $checks their $body$finds.
+  madlibs:
+  - search: $checks
+    replaces:
+    - checks
+    - inspects
+    - looks at
+    - observes
+    - gazes at
+  - search: $body
+    replaces:
+    - shoe
+    - arm
+    - hand
+    - leg
+    - clothes
+    - gear
+  - search: $finds
+    replaces:
+    - ' finding $nothing'
+    - 
+    - ' getting lost in thought'
+    - ' discovering $nothing'
+    - ' seeing $nothing'
+  - search: $nothing
+    replaces:
+    - nothing
+    - $more mud than $expected
+    - $more dust than $expected
+    - a $creepy bug
+    - some $creepy bugs
+    - $more $creepy things than $expected
+  - search: $more
+    replaces:
+    - more
+    - less
+    - way more
+    - way less
+  - search: $creepy
+    replaces:
+    - creepy
+    - cute
+    - gross
+    - small
+    - big
+    - huge
+    - tiny
+    - little
+    - cool
+    - disgusting
+  - search: $expected
+    replaces:
+    - expected
+    - usual
+    - the expected
+    - they'd like to see
+    - normal
+    - they've ever seen before
+  clip: {fileID: 0}
+  cost: 0.1
+  player: {fileID: 11400000, guid: ac81b61c569d9eb44b83a3ff85d9bd4c, type: 2}
+  enemy: {fileID: 11400000, guid: 5b041d733a7bc5148b07b4cc1d129629, type: 2}
+  actionPoints: {fileID: 11400000, guid: a9a05fd17c9de204b8d381477b4535e7, type: 2}

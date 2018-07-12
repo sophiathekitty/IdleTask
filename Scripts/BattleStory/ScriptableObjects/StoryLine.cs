@@ -7,6 +7,8 @@ public class StoryLine : ScriptableObject {
     public MadLib[] madlibs;
     public AudioClip clip;
     public float cost = 1;
+    public Character player;
+    public Character enemy;
     public FloatVariable actionPoints;
     public virtual string MakeSentence()
     {
@@ -15,6 +17,9 @@ public class StoryLine : ScriptableObject {
             s = s.Replace(r.search, r.Replace);
         if(actionPoints != null)
             actionPoints.RuntimeValue -= cost;
+        s = s.Replace("$player", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.full_name.RuntimeValue + "</color></b>");
+        s = s.Replace("$enemy", "<b><color=#" + ColorUtility.ToHtmlStringRGB(enemy.color) + ">" + enemy.full_name.RuntimeValue + "</color></b>");
+        Debug.Log(player.full_name.RuntimeValue);
         return s;
     }
     public virtual bool CanDo
