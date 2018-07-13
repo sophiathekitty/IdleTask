@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryLocation : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+[CreateAssetMenu(menuName = "Story/Location")]
+public class StoryLocation : ScriptableObject {
+    public string display_name;
+    public Sprite background;
+    public List<StoryLocation> neighbors;
+    public List<StoryItem> hiddenItems;
 }

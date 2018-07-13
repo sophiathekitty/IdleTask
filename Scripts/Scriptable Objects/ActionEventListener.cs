@@ -8,8 +8,8 @@ public class ActionEventListener : MonoBehaviour {
     public StoryLine storyLine;
     public StoryLine[] storyLines;
     public StoryEvent Response;
-    public AttributeVariable playerExperience;
-    public FloatVariable actionPoints;
+    //public AttributeVariable playerExperience;
+    //public FloatVariable actionPoints;
 
     private void OnEnable()
     {

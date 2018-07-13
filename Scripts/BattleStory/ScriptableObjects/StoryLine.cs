@@ -10,6 +10,8 @@ public class StoryLine : ScriptableObject {
     public Character player;
     public Character enemy;
     public FloatVariable actionPoints;
+    public BoolVariable isInBattle;
+    public bool battle;
     public virtual string MakeSentence()
     {
         string s = sentence;
@@ -26,24 +28,34 @@ public class StoryLine : ScriptableObject {
     {
         get
         {
+            // some actions can only happen in or out of battle.... some probably don't care....
+            if (isInBattle != null && isInBattle.RuntimeValue != battle)
+                return false;
+
+            // if there's no action points to check against i guess we can do this by default.....
             if (actionPoints == null)
                 return true;
 
             return actionPoints.RuntimeValue > cost;
         }
     }
-
+    /// <summary>
+    /// MadLibs.... like the classic pick a word..... bonus you can do more complex things than that....
+    /// $keyword -> sentance fragments to be randomly selected
+    /// </summary>
     [System.Serializable]
     public class MadLib
     {
-        public string search;
-        public string[] replaces;
+        public string search;       // type_of_animal
+        public string[] replaces;   // dog, cat, wolf, monkey, bear, rat
         public string Replace
         {
             get
             {
-                if(replaces.Length > 1)
+                // just grab one of the replace options and send it on it's way....
+                if (replaces.Length > 1)
                     return replaces[Random.Range(0,replaces.Length-1)];
+                // really..... shouldn't ever happen but no point breaking over that....
                 return "";
             }
         }

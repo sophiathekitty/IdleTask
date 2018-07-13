@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryItem : MonoBehaviour {
+public class StoryItem : ScriptableObject {
+    public string display_name;
+    public Color color;
+    public Sprite icon;
+    public AttributeVariable attributeVariable;
+    public FloatVariable floatVariable;
+    public float valueChange;
+    public float attrMaxChange;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void UseItem()
+    {
+        if (floatVariable != null)
+            floatVariable.RuntimeValue += valueChange;
+        if(attributeVariable != null)
+        {
+            attributeVariable.RuntimeValue += valueChange;
+            attributeVariable.RuntimeMax += attrMaxChange;
+        }
+    }
 }
