@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dfd5b24237b50c4a9212e5c6dde1e52, type: 3}
   m_Name: PlayerMana
   m_EditorClassIdentifier: 
-  InitialValue: 3
-  InitialMax: 50
+  InitialValue: 10
+  InitialMax: 10
   InitialUnavailable: 0

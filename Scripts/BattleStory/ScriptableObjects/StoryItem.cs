@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Story/Item")]
 public class StoryItem : ScriptableObject {
     public string display_name;
     public Color color;
@@ -10,6 +11,8 @@ public class StoryItem : ScriptableObject {
     public FloatVariable floatVariable;
     public float valueChange;
     public float attrMaxChange;
+    [System.NonSerialized]
+    public int playerOwns;
 
     public void UseItem()
     {
