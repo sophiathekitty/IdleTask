@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96e15c93161bd74ca33f05fb7514625, type: 3}
   m_Name: Health Potion
   m_EditorClassIdentifier: 
-  display_name: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  display_name: Health Potion
+  color: {r: 1, g: 0.1764706, b: 0, a: 1}
   icon: {fileID: 0}
-  attributeVariable: {fileID: 0}
+  attributeVariable: {fileID: 11400000, guid: 7959ce96a4ac03c48bfe6a9072916260, type: 2}
   floatVariable: {fileID: 0}
-  valueChange: 0
+  valueChange: 50
   attrMaxChange: 0

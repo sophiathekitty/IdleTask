@@ -5,7 +5,6 @@ using UnityEngine;
 public class StoryLine : ScriptableObject {
     public string sentence; // $player searched the area and found, $reward
     public MadLib[] madlibs;
-    public AudioClip clip;
     public float cost = 1;
     public Character player;
     public Character enemy;

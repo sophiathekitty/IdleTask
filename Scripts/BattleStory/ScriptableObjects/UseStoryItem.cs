@@ -2,15 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseStoryItem : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+[CreateAssetMenu(menuName = "Story/Use Item", fileName = "Use Item")]
+public class UseStoryItem : StoryLine {
+    public StoryItem[] items;
 }
