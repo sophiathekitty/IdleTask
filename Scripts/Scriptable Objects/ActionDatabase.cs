@@ -32,19 +32,28 @@ public class ActionDatabase : SavableVariable, ISerializationCallbackReceiver {
 
     public override void OnLoadData(string data)
     {
+        
         actions.Clear();
-        string[] ams = data.Split('|');
+        string[] dateData = data.Split('}');
+        bool resetStreak = (dateData[0] != System.DateTime.Today.ToShortDateString());
+
+        string[] ams = dateData[1].Split('|');
         foreach (string am in ams)
             if (am != "")
                 actions.Add(new ActionModel(am));
 
         for (int i = 0; i < actions.Count; i++)
+        {
             actions[i].index = i;
+            if (resetStreak)
+                actions[i].clicks = 0;
+        }
+            
     }
 
     public override string OnSaveData()
     {
-        string data =  "";
+        string data = System.DateTime.Today.ToShortDateString() + "}";
         foreach(ActionModel am in actions)
         {
             data += am.ToString() + "|";
