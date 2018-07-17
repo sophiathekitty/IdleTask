@@ -13,6 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   full_name: {fileID: 11400000, guid: 9fad41c370f52a44e933cbad0a4212e0, type: 2}
   short_name: {fileID: 11400000, guid: 6e93ee546443d8648889b7ce2213fee0, type: 2}
+  they: {fileID: 11400000, guid: 399214ff34dc37f428f1e09f2b3bd1ea, type: 2}
+  their: {fileID: 11400000, guid: 02d6dd37793995142a670023d4278939, type: 2}
+  theirs: {fileID: 11400000, guid: 8c6299a5586668f4a846934ad57fe990, type: 2}
+  them: {fileID: 11400000, guid: a6c45ad632b39c640932ab0240e963ab, type: 2}
   color: {r: 0.40784317, g: 0.95294124, b: 0.6509804, a: 1}
   level: {fileID: 11400000, guid: 98b275436e2bab84d92679789786ac55, type: 2}
   health: {fileID: 11400000, guid: 7959ce96a4ac03c48bfe6a9072916260, type: 2}

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ActionEventListener : MonoBehaviour {
     public ActionEvent Event;
     public StoryLine storyLine;
     public StoryLine[] storyLines;
     public StoryEvent Response;
+    public Image locationBack;
     //public AttributeVariable playerExperience;
     //public FloatVariable actionPoints;
 
@@ -22,7 +24,14 @@ public class ActionEventListener : MonoBehaviour {
 
     public void OnEventRaised(ActionLevel action)
     {
-        Response.Invoke(GetStoryLine(action));
+        StoryLine cStoryLine = GetStoryLine(action);
+        /*
+        // is this a change of location?
+        ChangeLocation cLocation = cStoryLine as ChangeLocation;
+        if (cLocation != null)
+            locationBack.sprite = cLocation.location.background;
+            */
+        Response.Invoke(cStoryLine);
     }
 
     public StoryLine GetStoryLine(ActionLevel action)
@@ -33,7 +42,7 @@ public class ActionEventListener : MonoBehaviour {
                 validLines.Add(line);
         
         if (validLines.Count > 0)
-            return validLines[Random.Range(0, validLines.Count - 1)];
+            return validLines[Random.Range(0, validLines.Count)];
         // return default
         return storyLine;
     }

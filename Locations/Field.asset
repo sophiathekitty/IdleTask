@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf486b3b05f71b44a99382841cf0e17e, type: 3}
   m_Name: Field
   m_EditorClassIdentifier: 
-  display_name: field
+  index: 0
+  display_name: an empty field
   background: {fileID: 21300000, guid: d7ceb66d90562f84187b2525dc22be8d, type: 3}
-  neighbors: []
+  neighbors:
+  - {fileID: 11400000, guid: fd567bc6c7b349747a911d1f293c7a77, type: 2}
   hiddenItems: []

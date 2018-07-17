@@ -15,6 +15,7 @@ public class ChangeLocation : StoryLine {
             foreach (StoryLocation n in location.neighbors)
                 if (locationIndex.RuntimeValue == n.index)
                     isNeighbor = true;
+            Debug.Log("Change Location: " + location.display_name + " " + isNeighbor.ToString() + " " + base.CanDo.ToString() + " " + (base.CanDo && isNeighbor).ToString());
             return (base.CanDo && isNeighbor);
         }
     }

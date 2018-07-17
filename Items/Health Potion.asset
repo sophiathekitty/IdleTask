@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96e15c93161bd74ca33f05fb7514625, type: 3}
   m_Name: Health Potion
   m_EditorClassIdentifier: 
+  article: a
   display_name: Health Potion
   color: {r: 1, g: 0.1764706, b: 0, a: 1}
   icon: {fileID: 0}

@@ -8,28 +8,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a65965eda3b1504ca68a5a9d9e8a2de, type: 3}
-  m_Name: Exploring
+  m_Script: {fileID: 11500000, guid: 7032e754c453109469aa811fe865c8e6, type: 3}
+  m_Name: GotoField
   m_EditorClassIdentifier: 
-  sentence: $player $explores $area.
+  sentence: $player $goes $location.
   madlibs:
-  - search: $explores
+  - search: $goes
     replaces:
-    - explores
-    - searches
-    - looks around
-    - walks around
-    - contemplates
-  - search: $area
+    - makes $their way to
+    - heads $over to
+    - travels to
+  - search: $over
     replaces:
-    - the nearby area
-    - $their current location
-    - the area
-    - for a short while
-    - without purpose
-  cost: 2
+    - on over
+    - over
+    - down
+  cost: 1
   player: {fileID: 11400000, guid: ac81b61c569d9eb44b83a3ff85d9bd4c, type: 2}
   enemy: {fileID: 11400000, guid: 5b041d733a7bc5148b07b4cc1d129629, type: 2}
   actionPoints: {fileID: 11400000, guid: a9a05fd17c9de204b8d381477b4535e7, type: 2}
   isInBattle: {fileID: 11400000, guid: 9c79f0d6ef30f614b80c1001b2d666a2, type: 2}
   battle: 0
+  location: {fileID: 11400000, guid: cee2b3d34ce5ec046b99d4251e4d694a, type: 2}
+  locationIndex: {fileID: 11400000, guid: 83c211088756dff4c8721bdaefaedaa0, type: 2}

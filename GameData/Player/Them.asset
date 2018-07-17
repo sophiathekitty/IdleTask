@@ -9,6 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f6e745ff2d38ca4bac44100c1ca985c, type: 3}
-  m_Name: New String Variable
+  m_Name: Them
   m_EditorClassIdentifier: 
-  InitialValue: 
+  InitialValue: her

@@ -22,6 +22,8 @@ public class StoryLine : ScriptableObject {
         s = s.Replace("$their", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.their.RuntimeValue + "</color></b>");
         s = s.Replace("$theirs", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.theirs.RuntimeValue + "</color></b>");
         s = s.Replace("$them", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.them.RuntimeValue + "</color></b>");
+        s = s.Replace("$they", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.they.RuntimeValue + "</color></b>");
+
         s = s.Replace("$enemy", "<b><color=#" + ColorUtility.ToHtmlStringRGB(enemy.color) + ">" + enemy.full_name.RuntimeValue + "</color></b>");
         Debug.Log(player.full_name.RuntimeValue);
         return s;
