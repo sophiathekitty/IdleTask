@@ -14,9 +14,9 @@ public class ExitBattle : StoryLine {
             switch (exitReason)
             {
                 case ExitReason.PlayerDead:
-                    return player.health.RuntimeValue == 0 && base.CanDo;
+                    return player.health.RuntimeValue <= 0 && base.CanDo;
                 case ExitReason.EnemyDead:
-                    return enemy.health.RuntimeValue == 0 && base.CanDo;
+                    return enemy.health.RuntimeValue <= 0 && base.CanDo;
                 case ExitReason.PlayerFlee:
                     return player.health.RuntimeValue < player.health.RuntimeValue * 0.1 && base.CanDo;
             }

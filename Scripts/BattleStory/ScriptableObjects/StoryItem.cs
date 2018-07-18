@@ -46,5 +46,6 @@ public class StoryItem : ScriptableObject {
             attributeVariable.RuntimeValue += valueChange;
             attributeVariable.RuntimeMax += attrMaxChange;
         }
+        playerOwns--;
     }
 }

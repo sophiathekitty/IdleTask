@@ -8,29 +8,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9b398d1798ebe40b24be23791de6b8, type: 3}
-  m_Name: Get Item
+  m_Script: {fileID: 11500000, guid: e231743529f97f6458bf600b79773a05, type: 3}
+  m_Name: PlayerRuns
   m_EditorClassIdentifier: 
-  sentence: $player $searches $finding $item.
+  sentence: $Fearing $defeat $player $flees.
   madlibs:
-  - search: $searches
+  - search: $Fearing
     replaces:
-    - looks around $their feet
-    - searches the area
-    - goes digging for treasure
-    - scans the ground
-  - search: $finding
+    - Fearing
+    - Anticipating
+    - Seeing $their impending
+    - Expecting
+  - search: $defeat
     replaces:
-    - finding
-    - discovering
-    - locating
-    - and just happens to see
-  cost: 3
+    - defeat
+    - death
+  - search: $flees
+    replaces:
+    - flees
+    - flees in terror
+    - runs away
+  cost: 10
   player: {fileID: 11400000, guid: ac81b61c569d9eb44b83a3ff85d9bd4c, type: 2}
   enemy: {fileID: 11400000, guid: 5b041d733a7bc5148b07b4cc1d129629, type: 2}
   actionPoints: {fileID: 11400000, guid: a9a05fd17c9de204b8d381477b4535e7, type: 2}
   isInBattle: {fileID: 11400000, guid: 9c79f0d6ef30f614b80c1001b2d666a2, type: 2}
-  battle: 0
-  items:
-  - {fileID: 11400000, guid: da0957cb22325b947bc60fb3791c651b, type: 2}
-  successRate: 0.5
+  battle: 1
+  exitReason: 2

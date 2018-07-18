@@ -12,6 +12,7 @@ public class Character : ScriptableObject
     public StringVariable their;            // thier/her/his
     public StringVariable theirs;           // theirs/hers/his
     public StringVariable them;             // them/her/him
+    public StringVariable themself;        // them/her/him
 
     public Color color;                     // color for their name to show up in
 

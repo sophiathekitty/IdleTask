@@ -12,7 +12,7 @@ public class GetStoryItem : StoryLine {
     {
         string item_name = "$nothing";
         string sent = base.MakeSentence();
-        if (Random.Range(0f,1f) < successRate)
+        if (Random.Range(0f,1f) < successRate * player.perception.RuntimeValue)
         {
             // give player an item
             StoryItem storyItem = items[Random.Range(0, items.Length - 1)];

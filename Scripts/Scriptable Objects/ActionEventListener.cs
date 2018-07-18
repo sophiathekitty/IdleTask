@@ -8,6 +8,7 @@ public class ActionEventListener : MonoBehaviour {
     public ActionEvent Event;
     public StoryLine storyLine;
     public StoryLine[] storyLines;
+    public StoryBook storyBook;
     public StoryEvent Response;
     public Image locationBack;
     //public AttributeVariable playerExperience;
@@ -24,7 +25,7 @@ public class ActionEventListener : MonoBehaviour {
 
     public void OnEventRaised(ActionLevel action)
     {
-        StoryLine cStoryLine = GetStoryLine(action);
+        StoryLine cStoryLine = storyBook.GetStoryLine(action);
         /*
         // is this a change of location?
         ChangeLocation cLocation = cStoryLine as ChangeLocation;

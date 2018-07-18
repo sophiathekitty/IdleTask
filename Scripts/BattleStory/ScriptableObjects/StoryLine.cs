@@ -11,13 +11,11 @@ public class StoryLine : ScriptableObject {
     public FloatVariable actionPoints;
     public BoolVariable isInBattle;
     public bool battle;
-    public virtual string MakeSentence()
+
+    public string ApplyMadLib(string s)
     {
-        string s = sentence;
         foreach (MadLib r in madlibs)
             s = s.Replace(r.search, r.Replace);
-        if(actionPoints != null)
-            actionPoints.RuntimeValue -= cost;
         s = s.Replace("$player", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.full_name.RuntimeValue + "</color></b>");
         s = s.Replace("$their", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.their.RuntimeValue + "</color></b>");
         s = s.Replace("$theirs", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.theirs.RuntimeValue + "</color></b>");
@@ -25,8 +23,27 @@ public class StoryLine : ScriptableObject {
         s = s.Replace("$they", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.they.RuntimeValue + "</color></b>");
 
         s = s.Replace("$enemy", "<b><color=#" + ColorUtility.ToHtmlStringRGB(enemy.color) + ">" + enemy.full_name.RuntimeValue + "</color></b>");
-        Debug.Log(player.full_name.RuntimeValue);
         return s;
+    }
+    public virtual string MakeSentence()
+    {
+        if (actionPoints != null)
+            actionPoints.RuntimeValue -= cost;
+
+        return ApplyMadLib(sentence);
+        /*
+        string s = sentence;
+        foreach (MadLib r in madlibs)
+            s = s.Replace(r.search, r.Replace);
+        s = s.Replace("$player", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.full_name.RuntimeValue + "</color></b>");
+        s = s.Replace("$their", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.their.RuntimeValue + "</color></b>");
+        s = s.Replace("$theirs", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.theirs.RuntimeValue + "</color></b>");
+        s = s.Replace("$them", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.them.RuntimeValue + "</color></b>");
+        s = s.Replace("$they", "<b><color=#" + ColorUtility.ToHtmlStringRGB(player.color) + ">" + player.they.RuntimeValue + "</color></b>");
+
+        s = s.Replace("$enemy", "<b><color=#" + ColorUtility.ToHtmlStringRGB(enemy.color) + ">" + enemy.full_name.RuntimeValue + "</color></b>");
+        return s;
+        */
     }
     public virtual bool CanDo
     {

@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4588f54de1afd94d87ff99ef5ee8153, type: 3}
   m_Name: Location
   m_EditorClassIdentifier: 
-  InitialValue: 0
+  InitialValue: 1
