@@ -32,6 +32,8 @@ public class StoryLine : ScriptableObject {
         if (actionPoints != null)
             actionPoints.RuntimeValue -= cost;
 
+        player.experience.RuntimeValue += experience;
+
         return ApplyMadLib(sentence);
         /*
         string s = sentence;

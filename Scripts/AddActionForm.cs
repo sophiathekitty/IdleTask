@@ -33,6 +33,11 @@ public class AddActionForm : MonoBehaviour {
         };
         currentGrid.AddAction(action);
         database.actions.Add(action);
+
+        for (int i = 0; i < database.actions.Count; i++)
+            database.actions[i].index = i;
+
+
         gameObject.SetActive(false);
     }
 	// Update is called once per frame

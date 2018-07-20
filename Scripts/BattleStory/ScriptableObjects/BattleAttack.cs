@@ -20,7 +20,7 @@ public class BattleAttack : StoryLine {
         get
         {
             // uh... i guess make sure the attacker is alive....
-            if (attacker.health.RuntimeValue <= 0 && defender.health.RuntimeValue <= 0)
+            if (attacker.IsDead || defender.IsDead)
                 return false;
 
             if (manaCost > attacker.energy.RuntimeValue)

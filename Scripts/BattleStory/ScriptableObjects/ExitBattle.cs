@@ -27,6 +27,7 @@ public class ExitBattle : StoryLine {
 
     public override string MakeSentence()
     {
+        player.experience.RuntimeValue += enemy.experience.RuntimeValue;
         isInBattle.RuntimeValue = false;
         return base.MakeSentence();
     }

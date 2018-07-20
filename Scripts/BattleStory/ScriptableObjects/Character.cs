@@ -24,12 +24,43 @@ public class Character : ScriptableObject
     public FloatVariable will;              // how much special atk/def they have
     public FloatVariable stamina;           // how many action points they have
     public FloatVariable perception;        // their ability to find things and how likely they will land a hit/dodge in battle
+    public float levelUpRate = 0.1f;
+    public int maxLevel = 100;
+    public AnimationCurve levelUpCurve;
 
     public void Respawn()
     {
         health.RuntimeValue = health.RuntimeMax;
         energy.RuntimeValue = energy.RuntimeMax;
         stamina.RuntimeValue = 0;
+    }
+
+    public void LevelUp()
+    {
+        // do a level up...
+        if(level.RuntimeValue < maxLevel)
+            level.RuntimeValue++;
+
+        health.RuntimeValue = health.RuntimeMax += (health.RuntimeMax * CurvedLevelUpRate);
+        energy.RuntimeValue = energy.RuntimeMax += (energy.RuntimeMax * CurvedLevelUpRate);
+
+        experience.RuntimeMax += (experience.RuntimeMax * CurvedLevelUpRate);
+        experience.RuntimeValue = 0;
+
+        strength.RuntimeValue += (strength.RuntimeValue * CurvedLevelUpRate);
+        will.RuntimeValue += (will.RuntimeValue * CurvedLevelUpRate);
+        perception.RuntimeValue += (perception.RuntimeValue * CurvedLevelUpRate);
+    }
+
+    public float CurvedLevelUpRate
+    {
+        get
+        {
+            float value = levelUpCurve.Evaluate(level.RuntimeValue / maxLevel);
+            if (float.IsNaN(value))
+                return levelUpRate;
+            return value;
+        }
     }
 
     public bool IsDead

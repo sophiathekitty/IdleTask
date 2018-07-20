@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: PlayerExperience
   m_EditorClassIdentifier: 
   InitialValue: 0
-  InitialMax: 50
+  InitialMax: 100
   InitialUnavailable: 0

@@ -7,6 +7,7 @@ public class AdventureLog : MonoBehaviour {
     public StoryBook storyBook;
     public float interval = 5f;
     private float intervalCountDown = 0f;
+    public Character player;
 
     // Use this for initialization
     void Start () {
@@ -25,6 +26,9 @@ public class AdventureLog : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (player.short_name.RuntimeValue == player.short_name.InitialValue)
+            return;
+
         intervalCountDown -= Time.deltaTime;
 		if(intervalCountDown < 0)
         {
