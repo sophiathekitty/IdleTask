@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AdventureLog : MonoBehaviour {
     public GameObject entryPrefab;
+    public StoryBook storyBook;
+    public float interval = 5f;
+    private float intervalCountDown = 0f;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +25,13 @@ public class AdventureLog : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+        intervalCountDown -= Time.deltaTime;
+		if(intervalCountDown < 0)
+        {
+            StoryLine storyLine = storyBook.GetStoryLine(false);
+            if (storyLine != null)
+                AddEntry(storyLine);
+            intervalCountDown = interval;
+        }
 	}
 }

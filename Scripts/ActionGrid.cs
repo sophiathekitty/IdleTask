@@ -31,7 +31,6 @@ public class ActionGrid : MonoBehaviour {
     {
         GameObject actionButtonObject = GameObject.Instantiate(actionPrefab, transform);
         ActionButton actionButton = actionButtonObject.GetComponent<ActionButton>();
-        Debug.Log(action.level + " / " + levels.levels.Length);
         actionButton.level = levels.levels[action.level];
         actionButton.text.text = action.name;
         actionButton.icon.sprite = icons.icons[action.icon];

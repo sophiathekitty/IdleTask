@@ -54,7 +54,7 @@ public class Character : ScriptableObject
 
         strength.RuntimeValue = enemy.strength;
         will.RuntimeValue = enemy.will;
-        //stamina.RuntimeValue += enemy.stamina;
+        stamina.RuntimeValue += enemy.stamina;
         perception.RuntimeValue = enemy.perception;
     }
 }

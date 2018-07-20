@@ -25,14 +25,15 @@ public class ActionEventListener : MonoBehaviour {
 
     public void OnEventRaised(ActionLevel action)
     {
-        StoryLine cStoryLine = storyBook.GetStoryLine(action);
+        StoryLine cStoryLine = storyBook.GetStoryLine();
         /*
         // is this a change of location?
         ChangeLocation cLocation = cStoryLine as ChangeLocation;
         if (cLocation != null)
             locationBack.sprite = cLocation.location.background;
             */
-        Response.Invoke(cStoryLine);
+        if(cStoryLine != null)
+            Response.Invoke(cStoryLine);
     }
 
     public StoryLine GetStoryLine(ActionLevel action)

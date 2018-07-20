@@ -8,26 +8,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e231743529f97f6458bf600b79773a05, type: 3}
-  m_Name: PlayerLose
+  m_Script: {fileID: 11500000, guid: 5a60ea362576a0b4eaf3d5b5a56f6ff6, type: 3}
+  m_Name: PlayerRespawn
   m_EditorClassIdentifier: 
-  sentence: $player $hasbeen $defeated by $enemy.
+  sentence: $death_is_not_the_end.
   madlibs:
-  - search: $hasbeen
+  - search: $death_is_not_the_end
     replaces:
-    - has been
-    - was
-  - search: $defeated
+    - Death is not the end
+    - $player $respawns
+    - Life returns to $player
+    - Well this is awkward...... Uh..... $player didn't die after all
+  - search: $respawns
     replaces:
-    - defeated
-    - murdered
-    - killed
+    - respawns
+    - returns to life
+    - has returned from the dead
+    - is probably not a zombie..... hopefully
   cost: 1
-  experience: 0.1
+  experience: -0.1
   player: {fileID: 11400000, guid: ac81b61c569d9eb44b83a3ff85d9bd4c, type: 2}
   enemy: {fileID: 11400000, guid: 5b041d733a7bc5148b07b4cc1d129629, type: 2}
   actionPoints: {fileID: 0}
   isInBattle: {fileID: 11400000, guid: 9c79f0d6ef30f614b80c1001b2d666a2, type: 2}
-  battle: 1
-  playerAlive: 0
-  exitReason: 0
+  battle: 0
+  playerAlive: 1

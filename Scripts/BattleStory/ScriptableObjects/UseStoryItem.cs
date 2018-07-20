@@ -22,6 +22,10 @@ public class UseStoryItem : StoryLine {
     public override string MakeSentence()
     {
         item.UseItem();
-        return base.MakeSentence();
+        string sent = base.MakeSentence();
+        sent = sent.Replace("$item", item.DisplayNameColored);
+        sent = sent.Replace("$change", Mathf.Round(item.valueChange).ToString());
+        sent = sent.Replace("$max_change", Mathf.Round(item.attrMaxChange).ToString());
+        return sent;
     }
 }
