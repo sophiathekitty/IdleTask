@@ -25,4 +25,36 @@ public class Character : ScriptableObject
     public FloatVariable stamina;           // how many action points they have
     public FloatVariable perception;        // their ability to find things and how likely they will land a hit/dodge in battle
 
+    public void Respawn()
+    {
+        health.RuntimeValue = health.RuntimeMax;
+        energy.RuntimeValue = energy.RuntimeMax;
+        stamina.RuntimeValue = 0;
+    }
+
+    public bool IsDead
+    {
+        get
+        {
+            return health.RuntimeValue <= 0;
+        }
+    }
+
+    public void ApplyPreset(EnemyDefinition enemy)
+    {
+        full_name.RuntimeValue = enemy.full_name;
+        short_name.RuntimeValue = enemy.short_name;
+
+        color = enemy.color;
+
+        level.RuntimeValue = enemy.level;
+        health.RuntimeValue = health.RuntimeMax = enemy.health;
+        energy.RuntimeValue = energy.RuntimeMax = enemy.energy;
+        experience.RuntimeValue = experience.RuntimeMax = enemy.experience;
+
+        strength.RuntimeValue = enemy.strength;
+        will.RuntimeValue = enemy.will;
+        //stamina.RuntimeValue += enemy.stamina;
+        perception.RuntimeValue = enemy.perception;
+    }
 }

@@ -5,6 +5,7 @@ using TMPro;
 public class NewPlayerForm : MonoBehaviour {
 
     public TMP_InputField playerName;
+    public TMP_InputField playerNameLong;
     public TMP_Dropdown playerPronouns;
 
     public SaveObject saveObject;
@@ -15,7 +16,9 @@ public class NewPlayerForm : MonoBehaviour {
         Debug.Log(playerName.text);
         Debug.Log(playerPronouns.value);
 
-        player.full_name.RuntimeValue = player.short_name.RuntimeValue = playerName.text;
+        player.full_name.RuntimeValue = playerNameLong.text;
+        player.short_name.RuntimeValue = playerName.text;
+
         switch (playerPronouns.value)
         {
             case 1:

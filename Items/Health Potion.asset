@@ -17,5 +17,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   attributeVariable: {fileID: 11400000, guid: 7959ce96a4ac03c48bfe6a9072916260, type: 2}
   floatVariable: {fileID: 0}
-  valueChange: 50
+  valueChange: 10
   attrMaxChange: 0

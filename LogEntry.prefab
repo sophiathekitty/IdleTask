@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224411859023001854}
   - component: {fileID: 114705952131876234}
+  - component: {fileID: 114441195349266880}
   m_Layer: 5
   m_Name: LogEntry
   m_TagString: Untagged
@@ -61,6 +62,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114441195349266880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871872848852338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa95b8fb729959e4f90a942a80ac16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 114475373254929734}
 --- !u!114 &114475373254929734
 MonoBehaviour:
   m_ObjectHideFlags: 1

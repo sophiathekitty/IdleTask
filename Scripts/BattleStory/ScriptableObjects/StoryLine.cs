@@ -6,11 +6,13 @@ public class StoryLine : ScriptableObject {
     public string sentence; // $player searched the area and found, $reward
     public MadLib[] madlibs;
     public float cost = 1;
+    public float experience = 0.1f;
     public Character player;
     public Character enemy;
     public FloatVariable actionPoints;
     public BoolVariable isInBattle;
     public bool battle;
+    public bool playerAlive = true;
 
     public string ApplyMadLib(string s)
     {
@@ -49,6 +51,8 @@ public class StoryLine : ScriptableObject {
     {
         get
         {
+            if (playerAlive && player.IsDead)
+                return false;
             // some actions can only happen in or out of battle.... some probably don't care....
             if (isInBattle != null && isInBattle.RuntimeValue != battle)
                 return false;

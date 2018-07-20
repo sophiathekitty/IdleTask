@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f877a49f21fe445b35d09acb876fda, type: 3}
+  m_Name: Axiety
+  m_EditorClassIdentifier: 
+  full_name: Debilitating Social Anxiety
+  short_name: Anxiety
+  sprite: {fileID: 21300056, guid: 283beb2d2ecf95c4e9bfe2df7c3ebb26, type: 3}
+  color: {r: 1, g: 0, b: 0.023967743, a: 1}
+  level: 2
+  health: 50
+  energy: 60
+  experience: 20
+  strength: 1
+  will: 2
+  stamina: 20
+  perception: 0.8

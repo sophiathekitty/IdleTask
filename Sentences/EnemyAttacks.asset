@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentence: $enemy $attacks $player
   madlibs:
-  - search: $attacls
+  - search: $attacks
     replaces:
     - takes a swing at
     - attacks
