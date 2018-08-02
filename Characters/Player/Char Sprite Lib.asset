@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73efee6904730fb4391dd44e69255e67, type: 3}
+  m_Name: Char Sprite Lib
+  m_EditorClassIdentifier: 
+  chars:
+  - {fileID: 11400000, guid: d645ccfa873cf6a49abc743b34898ae8, type: 2}
+  - {fileID: 11400000, guid: c0311300849d84f44bf84c412ce9a1fa, type: 2}
+  - {fileID: 11400000, guid: 65f2509c1e97295448a8fe23805c816a, type: 2}
+  - {fileID: 11400000, guid: ecd716a423efc514686eb588269531af, type: 2}
+  - {fileID: 11400000, guid: fb9ba1afe2e86fd40a06834f6ffa97db, type: 2}
+  - {fileID: 11400000, guid: b5af636f0f014ee4a8c51f9e42154eb8, type: 2}
+  - {fileID: 11400000, guid: ef0430148f8f2014b86beefd788cfd75, type: 2}
+  - {fileID: 11400000, guid: a201d8b4795821f4f80638274dd023b0, type: 2}
+  - {fileID: 11400000, guid: 252c5f2d2193b8647865b62b45e92617, type: 2}
+  - {fileID: 11400000, guid: 7d12ba289b7bc7247bb5b226ac6d2eb2, type: 2}
+  - {fileID: 11400000, guid: 76c503a064103854e9c7321e334c3bdd, type: 2}
+  - {fileID: 11400000, guid: 5ce884d250718584e881340766c89e8b, type: 2}
+  - {fileID: 11400000, guid: 9c6fe0c6da47e4d4ca5192849c1c1ffe, type: 2}
+  - {fileID: 11400000, guid: 169c6fb3e0911274091d7c34f8d9b35d, type: 2}
+  - {fileID: 11400000, guid: eaae21d2e33906048a3b697cc9033343, type: 2}
+  - {fileID: 11400000, guid: 2a6f9f2bd4e2ea0489100b7211bb299d, type: 2}
+  - {fileID: 11400000, guid: f130a49f23c943e4ba287803a2bb1617, type: 2}
+  - {fileID: 11400000, guid: 44494f303a277f9428d0091fd27e8c6f, type: 2}
+  - {fileID: 11400000, guid: 2f694755186569a43912d76bc479ac63, type: 2}
+  - {fileID: 11400000, guid: 2ea8eee640100e342a1e47c106b1ffea, type: 2}
+  - {fileID: 11400000, guid: 18ec1953b251d5040a733e105100443e, type: 2}
+  - {fileID: 11400000, guid: 815be6a9fcd141f4e9de5e90d5d820e0, type: 2}
+  - {fileID: 11400000, guid: 3b3c09b83eebb0942948862d6061dfa5, type: 2}
